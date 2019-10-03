@@ -8,7 +8,7 @@ public class DependencyInjectionDeveloper {
 	public DependencyInjectionDeveloper(Task task) {
 		this.task = task;
 	}
-	
+
 	public void doTask() {
 		task.execute();
 	}

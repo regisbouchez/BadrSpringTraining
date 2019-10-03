@@ -7,10 +7,16 @@ import spring.bean.User;
 public class Test4 {
 
 	public static void main(String[] args) {
-		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring/spring-config-4.xml");
+		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring/spring-config-3-1.xml");
 		//
 		User toto = (User) context.getBean("toto");
 		String str = toto.toString();
+
+		System.out.println("The result is " + str);
+
+		User arnold = (User) context.getBean("Arnold");
+		str = arnold.toString();
+
 		System.out.println("The result is " + str);
 		//
 		context.close();

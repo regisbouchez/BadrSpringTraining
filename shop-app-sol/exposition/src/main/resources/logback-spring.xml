@@ -1,0 +1,30 @@
+<configuration scan="true">
+	<springProperty name="app-log-dir"
+		source="application.log-dir" />
+	<springProperty name="app-log-file-name"
+		source="application.log-file-name" />
+
+	<property name="patternPlainText"
+		value="%date{yyyy-MM-dd HH:mm:ss.SSSXXX} | %-5level| %c{36} | %msg%n" />
+
+	<!-- Appender to console for local use only -->
+	<appender name="console"
+		class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>${patternPlainText}</pattern>
+		</encoder>
+	</appender>
+
+	<root level="INFO">
+		<appender-ref ref="console" />
+	</root>
+
+	<!-- https://logback.qos.ch/manual/configuration.html#shutdownHook and https://jira.qos.ch/browse/LOGBACK-1090 -->
+	<shutdownHook
+		class="ch.qos.logback.core.hook.DelayingShutdownHook" />
+
+	<contextListener
+		class="ch.qos.logback.classic.jul.LevelChangePropagator">
+		<resetJUL>true</resetJUL>
+	</contextListener>
+</configuration>
