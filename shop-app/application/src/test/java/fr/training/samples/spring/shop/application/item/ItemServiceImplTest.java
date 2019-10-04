@@ -3,9 +3,6 @@ package fr.training.samples.spring.shop.application.item;
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
 
-import java.util.Arrays;
-import java.util.List;
-
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,18 +34,8 @@ public class ItemServiceImplTest {
 	@MockBean
 	private transient ItemRepository itemRepository;
 
-	@Test
-	public void testGetAllItems() {
-		ItemEntity itemEntity = new ItemEntity(new ItemVO("DESC99", 99));
-		List<ItemEntity> items = Arrays.asList(itemEntity);
-		when(itemRepository.getAllItems()).thenReturn(items);
-		List<ItemEntity> itemsResult = itemManagement.getAllItems();
-		itemManagement.getAllItems();
-		itemManagement.getAllItems();
-		itemManagement.getAllItems();
-		assertNotNull(itemsResult);
-		assertTrue(itemsResult.size() == 1);
-	}
+
+
 
 	@Test
 	public void testAddItem() {

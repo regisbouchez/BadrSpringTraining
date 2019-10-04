@@ -1,6 +1,5 @@
 package fr.training.samples.spring.shop.domain.item;
 
-import java.util.List;
 import java.util.Set;
 
 /**
@@ -20,11 +19,6 @@ public interface ItemRepository {
      * @return
      */
     ItemEntity findOne(String itemId);
-
-    /**
-     * @return
-     */
-	List<ItemEntity> getAllItems();
 
     /**
      * @param itemsId

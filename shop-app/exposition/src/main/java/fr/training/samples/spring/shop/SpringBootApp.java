@@ -6,10 +6,13 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.ComponentScan;
 
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
+
 /**
  * @author Badr NASS
  *
  */
+@EnableSwagger2
 @SpringBootApplication
 @ComponentScan(basePackages = { "fr.training.samples.spring.shop" })
 public class SpringBootApp extends SpringBootServletInitializer {

@@ -1,6 +1,5 @@
 package fr.training.samples.spring.shop.infrastructure.item;
 
-import java.util.List;
 import java.util.Set;
 
 import javax.persistence.EntityManager;
@@ -47,11 +46,6 @@ public class ItemRepositoryImpl implements ItemRepository {
 	public ItemEntity findOne(final String itemId) {
 		return itemDataJpaRepository.findById(itemId)
 				.orElseThrow(() -> new NotFoundException("Item with id:" + itemId + ", not found"));
-	}
-
-	@Override
-	public List<ItemEntity> getAllItems() {
-		return itemDataJpaRepository.findAll();
 	}
 
 	@Override

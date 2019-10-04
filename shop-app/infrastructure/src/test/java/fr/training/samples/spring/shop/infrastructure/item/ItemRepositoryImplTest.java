@@ -1,9 +1,7 @@
 package fr.training.samples.spring.shop.infrastructure.item;
 
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
-import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -40,16 +38,6 @@ public class ItemRepositoryImplTest {
         final ItemEntity itemEntity = new ItemEntity(new ItemVO("DESC99", 99));
         itemRepository.addItem(itemEntity);
         assertNotNull(itemEntity.getId());
-    }
-
-    /**
-	 *  
-	 */
-    @Test
-    public void testGetAllItems() {
-		final List<ItemEntity> itemEntities = itemRepository.getAllItems();
-        assertNotNull(itemEntities);
-        assertTrue(itemEntities.size() == 5);
     }
 
     /**
