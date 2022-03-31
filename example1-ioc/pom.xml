@@ -17,7 +17,7 @@
 		<maven-resources-plugin.version>3.0.2</maven-resources-plugin.version>
 		<maven-eclipse-plugin.version>2.10</maven-eclipse-plugin.version>
 		<resource.delimiter>@</resource.delimiter>
-		<spring.version>5.1.5.RELEASE</spring.version>
+		<spring.version>5.3.18</spring.version>
 	</properties>
 
 	<dependencies>
